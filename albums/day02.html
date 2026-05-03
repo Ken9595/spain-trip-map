@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 02｜Segovia(塞哥維亞) Travel Photo Album</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f8fafc;
+      color: #111827;
+    }
+    body {
+      margin: 0;
+      padding: 14px;
+      background: #f8fafc;
+    }
+    .album {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      width: 100%;
+      min-height: 280px;
+    }
+    .panel {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+    .panel img {
+      width: 100%;
+      height: 240px;
+      display: block;
+      object-fit: cover;
+      background: #e5e7eb;
+    }
+    .caption {
+      padding: 10px 12px 12px;
+      line-height: 1.45;
+    }
+    .label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #9a3412;
+      margin-bottom: 4px;
+    }
+    .location .label {
+      color: #1d4ed8;
+    }
+    .title {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+    }
+    .meta {
+      display: block;
+      margin-top: 2px;
+      font-size: 12px;
+      color: #4b5563;
+    }
+    @media (max-width: 560px) {
+      body {
+        padding: 10px;
+      }
+      .album {
+        gap: 10px;
+      }
+      .panel img {
+        height: 170px;
+      }
+      .caption {
+        padding: 8px 9px 10px;
+      }
+      .title {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="album" aria-label="Day 02｜Segovia(塞哥維亞) rotating photo album">
+    <section class="panel daily">
+      <img id="dailyPhoto" alt="Day 02｜Segovia(塞哥維亞) daily selected photo">
+      <span class="caption">
+        <span class="label">Daily Selected Photos</span>
+        <span class="title">Day 02｜Segovia(塞哥維亞)</span>
+        <span class="meta">2026-04-23</span>
+      </span>
+    </section>
+    <section class="panel location">
+      <img id="locationPhoto" alt="Day 02｜Segovia(塞哥維亞) location selected photo">
+      <span class="caption">
+        <span class="label">Location Photos</span>
+        <span class="title">Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)</span>
+        <span class="meta">Changes every 2 seconds</span>
+      </span>
+    </section>
+  </main>
+  <script>
+    const dailyPhotos = ["../assets/photos/day02_segovia_daily_001.jpg","../assets/photos/day02_segovia_daily_005.jpg","../assets/photos/day02_segovia_daily_007.jpg","../assets/photos/day02_segovia_daily_008.jpg","../assets/photos/day02_segovia_daily_009.jpg","../assets/photos/day02_segovia_daily_010.jpg","../assets/photos/day02_segovia_daily_011.jpg","../assets/photos/day02_segovia_daily_012.jpg","../assets/photos/day02_segovia_daily_013.jpg","../assets/photos/day02_segovia_daily_014.jpg","../assets/photos/day02_segovia_daily_015.jpg","../assets/photos/day02_segovia_daily_016.jpg","../assets/photos/day02_segovia_daily_017.jpg"];
+    const locationPhotos = ["../assets/photos/day02_segovia_location_002.jpg","../assets/photos/day02_segovia_location_003.jpg","../assets/photos/day02_segovia_location_004.jpg","../assets/photos/day02_segovia_location_006.jpg","../assets/photos/day02_segovia_location_018.jpg"];
+    const dailyImage = document.getElementById("dailyPhoto");
+    const locationImage = document.getElementById("locationPhoto");
+    let dailyIndex = 0;
+    let locationIndex = 0;
+
+    function setPhoto(image, list, index) {
+      if (!list.length) return index;
+      image.src = list[index % list.length];
+      return index + 1;
+    }
+
+    function rotate() {
+      dailyIndex = setPhoto(dailyImage, dailyPhotos, dailyIndex);
+      locationIndex = setPhoto(locationImage, locationPhotos, locationIndex);
+    }
+
+    rotate();
+    window.setInterval(rotate, 2000);
+  </script>
+</body>
+</html>

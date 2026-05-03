@@ -6,7 +6,7 @@
     "title": "Day 01｜Madrid(馬德里)",
     "location": "Madrid(馬德里) → Madrid City Center(馬德里市中心)",
     "lat": 40.4168,
-    "lng": -3.7098,
+    "lng": -3.7388000000000003,
     "photos": [
       "assets/photos/day01_madrid_daily_002.jpg"
     ],
@@ -21,7 +21,7 @@
     "title": "Day 01｜Madrid(馬德里)",
     "location": "Madrid(馬德里) → Madrid City Center(馬德里市中心)",
     "lat": 40.4168,
-    "lng": -3.6978000000000004,
+    "lng": -3.6688,
     "photos": [
       "assets/photos/day01_madrid_location_001.jpg"
     ],
@@ -35,8 +35,8 @@
     "date": "2026-04-23",
     "title": "Day 02｜Segovia(塞哥維亞)",
     "location": "Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)",
-    "lat": 40.9429,
-    "lng": -4.1148,
+    "lat": 40.5199358,
+    "lng": -3.7170394,
     "photos": [
       "assets/photos/day02_segovia_daily_001.jpg",
       "assets/photos/day02_segovia_daily_005.jpg",
@@ -74,8 +74,8 @@
     "date": "2026-04-23",
     "title": "Day 02｜Segovia(塞哥維亞)",
     "location": "Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)",
-    "lat": 40.9429,
-    "lng": -4.102799999999999,
+    "lat": 40.5199358,
+    "lng": -3.6470393999999997,
     "photos": [
       "assets/photos/day02_segovia_location_002.jpg",
       "assets/photos/day02_segovia_location_003.jpg",
@@ -97,8 +97,8 @@
     "date": "2026-04-24",
     "title": "Day 03｜Toledo(托雷多)",
     "location": "Toledo(托雷多) → Medieval Old Town(中世紀舊城) → Mirador del Valle(山谷觀景台)",
-    "lat": 39.8628,
-    "lng": -4.0333000000000006,
+    "lat": 40.4182919,
+    "lng": -3.7479388,
     "photos": [
       "assets/photos/day03_toledo_daily_002.jpg",
       "assets/photos/day03_toledo_daily_006.jpg",
@@ -152,8 +152,8 @@
     "date": "2026-04-24",
     "title": "Day 03｜Toledo(托雷多)",
     "location": "Toledo(托雷多) → Medieval Old Town(中世紀舊城) → Mirador del Valle(山谷觀景台)",
-    "lat": 39.8628,
-    "lng": -4.0213,
+    "lat": 40.4182919,
+    "lng": -3.6779387999999997,
     "photos": [
       "assets/photos/day03_toledo_location_001.jpg",
       "assets/photos/day03_toledo_location_003.jpg",
@@ -249,8 +249,8 @@
     "date": "2026-04-25",
     "title": "Day 04｜Córdoba(哥多華)",
     "location": "Córdoba(哥多華) → Jewish Quarter(猶太區) → Roman Bridge(羅馬橋)",
-    "lat": 37.879,
-    "lng": -4.7854,
+    "lat": 39.458175,
+    "lng": -3.6365093,
     "photos": [
       "assets/photos/day04_cordoba_daily_005.jpg",
       "assets/photos/day04_cordoba_daily_006.jpg",
@@ -302,8 +302,8 @@
     "date": "2026-04-25",
     "title": "Day 04｜Córdoba(哥多華)",
     "location": "Córdoba(哥多華) → Jewish Quarter(猶太區) → Roman Bridge(羅馬橋)",
-    "lat": 37.879,
-    "lng": -4.7734,
+    "lat": 39.458175,
+    "lng": -3.5665093,
     "photos": [
       "assets/photos/day04_cordoba_location_001.jpg",
       "assets/photos/day04_cordoba_location_002.jpg",
@@ -377,8 +377,8 @@
     "date": "2026-04-26",
     "title": "Day 05｜Granada(格拉納達)",
     "location": "Granada(格拉納達) → Alhambra(阿爾罕布拉宮) → Albaicín(阿爾拜辛)",
-    "lat": 37.1761,
-    "lng": -3.5940999999999996,
+    "lat": 37.7298311,
+    "lng": -4.6703887,
     "photos": [
       "assets/photos/day05_granada_daily_003.jpg",
       "assets/photos/day05_granada_daily_006.jpg",
@@ -418,8 +418,8 @@
     "date": "2026-04-26",
     "title": "Day 05｜Granada(格拉納達)",
     "location": "Granada(格拉納達) → Alhambra(阿爾罕布拉宮) → Albaicín(阿爾拜辛)",
-    "lat": 37.1761,
-    "lng": -3.5821,
+    "lat": 37.7298311,
+    "lng": -4.6003887,
     "photos": [
       "assets/photos/day05_granada_location_001.jpg",
       "assets/photos/day05_granada_location_002.jpg",
@@ -481,8 +481,8 @@
     "date": "2026-04-27",
     "title": "Day 06｜Ronda(隆達)",
     "location": "Ronda(隆達) → Puente Nuevo(新橋) → Old Town(舊城區)",
-    "lat": 36.7423,
-    "lng": -5.1731,
+    "lat": 37.1483303,
+    "lng": -4.2667834000000004,
     "photos": [
       "assets/photos/day06_ronda_daily_002.jpg",
       "assets/photos/day06_ronda_daily_006.jpg",
@@ -520,8 +520,8 @@
     "date": "2026-04-27",
     "title": "Day 06｜Ronda(隆達)",
     "location": "Ronda(隆達) → Puente Nuevo(新橋) → Old Town(舊城區)",
-    "lat": 36.7423,
-    "lng": -5.161099999999999,
+    "lat": 37.1483303,
+    "lng": -4.1967834,
     "photos": [
       "assets/photos/day06_ronda_location_001.jpg",
       "assets/photos/day06_ronda_location_003.jpg",
@@ -601,8 +601,8 @@
     "date": "2026-04-28",
     "title": "Day 07｜Sevilla(塞維亞)",
     "location": "Sevilla(塞維亞) → Plaza de España(西班牙廣場) → Sevilla Cathedral(塞維亞主教座堂)",
-    "lat": 37.3891,
-    "lng": -5.9905,
+    "lat": 37.3787279,
+    "lng": -6.0218579000000005,
     "photos": [
       "assets/photos/day07_sevilla_daily_002.jpg",
       "assets/photos/day07_sevilla_daily_004.jpg",
@@ -638,8 +638,8 @@
     "date": "2026-04-28",
     "title": "Day 07｜Sevilla(塞維亞)",
     "location": "Sevilla(塞維亞) → Plaza de España(西班牙廣場) → Sevilla Cathedral(塞維亞主教座堂)",
-    "lat": 37.3891,
-    "lng": -5.9784999999999995,
+    "lat": 37.3787279,
+    "lng": -5.9518579,
     "photos": [
       "assets/photos/day07_sevilla_location_001.jpg",
       "assets/photos/day07_sevilla_location_003.jpg",
@@ -721,8 +721,8 @@
     "date": "2026-04-29",
     "title": "Day 08｜Montserrat(蒙塞拉特)",
     "location": "Montserrat(蒙塞拉特) → Mountain Monastery(山中修道院) → Scenic Trail(景觀步道)",
-    "lat": 41.5931,
-    "lng": 1.8319,
+    "lat": 41.5910665,
+    "lng": 1.8171306,
     "photos": [
       "assets/photos/day08_montserrat_daily_001.jpg",
       "assets/photos/day08_montserrat_daily_004.jpg",
@@ -762,8 +762,8 @@
     "date": "2026-04-29",
     "title": "Day 08｜Montserrat(蒙塞拉特)",
     "location": "Montserrat(蒙塞拉特) → Mountain Monastery(山中修道院) → Scenic Trail(景觀步道)",
-    "lat": 41.5931,
-    "lng": 1.8439,
+    "lat": 41.5910665,
+    "lng": 1.8871305999999999,
     "photos": [
       "assets/photos/day08_montserrat_location_002.jpg",
       "assets/photos/day08_montserrat_location_003.jpg",
@@ -813,8 +813,8 @@
     "date": "2026-04-30",
     "title": "Day 09｜Barcelona(巴塞隆納)",
     "location": "Barcelona(巴塞隆納) → Sagrada Família(聖家堂) → Park Güell(奎爾公園)",
-    "lat": 41.4036,
-    "lng": 2.1684,
+    "lat": 41.40278,
+    "lng": 2.1414516999999997,
     "photos": [
       "assets/photos/day09_barcelona_daily_004.jpg",
       "assets/photos/day09_barcelona_daily_006.jpg",
@@ -856,8 +856,8 @@
     "date": "2026-04-30",
     "title": "Day 09｜Barcelona(巴塞隆納)",
     "location": "Barcelona(巴塞隆納) → Sagrada Família(聖家堂) → Park Güell(奎爾公園)",
-    "lat": 41.4036,
-    "lng": 2.1803999999999997,
+    "lat": 41.40278,
+    "lng": 2.2114517,
     "photos": [
       "assets/photos/day09_barcelona_location_001.jpg",
       "assets/photos/day09_barcelona_location_002.jpg",
@@ -927,8 +927,8 @@
     "date": "2026-05-01",
     "title": "Day 10｜Barcelona(巴塞隆納)",
     "location": "Barcelona(巴塞隆納) → Sagrada Família(聖家堂) → Park Güell(奎爾公園) → Gothic Quarter(哥德區)",
-    "lat": 41.4036,
-    "lng": 2.1684,
+    "lat": 41.395347,
+    "lng": 2.1287423999999997,
     "photos": [
       "assets/photos/day10_barcelona_daily_004.jpg",
       "assets/photos/day10_barcelona_daily_010.jpg"
@@ -944,8 +944,8 @@
     "date": "2026-05-01",
     "title": "Day 10｜Barcelona(巴塞隆納)",
     "location": "Barcelona(巴塞隆納) → Sagrada Família(聖家堂) → Park Güell(奎爾公園) → Gothic Quarter(哥德區)",
-    "lat": 41.4036,
-    "lng": 2.1803999999999997,
+    "lat": 41.395347,
+    "lng": 2.1987424,
     "photos": [
       "assets/photos/day10_barcelona_location_001.jpg",
       "assets/photos/day10_barcelona_location_002.jpg",
