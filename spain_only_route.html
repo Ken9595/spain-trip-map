@@ -82,11 +82,11 @@
     cityMarkers.forEach((city) => {
       bounds.push([city.lat, city.lng]);
       L.circleMarker([city.lat, city.lng], {
-        radius: 7,
+        radius: 4,
         color: "#111827",
         fillColor: "#ffffff",
         fillOpacity: 1,
-        weight: 2
+        weight: 1.5
       }).addTo(map).bindPopup('<div class="route-card"><strong>' + city.name + '</strong><span>Route stop</span></div>');
     });
 
