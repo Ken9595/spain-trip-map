@@ -58,15 +58,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
 
 <style>
+</style>
+
+<style>
+</style>
+
+<style>
+</style>
+
+<style>
+</style>
+
+<style>
 /* SPAIN_PHOTO_MARKERS_CSS_START */
 .spain-photo-pin {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid #ffffff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   background: #111827;
+}
+.spain-photo-pin.daily {
+  border-color: #f97316;
+}
+.spain-photo-pin.location {
+  border-color: #2563eb;
 }
 .spain-photo-pin img {
   width: 100%;
@@ -75,12 +93,12 @@
   display: block;
 }
 .spain-photo-popup {
-  width: 240px;
+  width: 260px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 .spain-photo-popup img {
   width: 100%;
-  max-height: 160px;
+  height: 170px;
   object-fit: cover;
   border-radius: 8px;
   display: block;
@@ -1103,35 +1121,64 @@
 
         
 
+
+
+
+
 /* SPAIN_PHOTO_MARKERS_START */
 (function () {
-  const photoMarkers = [{"day":2,"date":"2026-04-23","title":"Day 02｜Segovia(塞哥維亞)","location":"Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)","lat":40.9429,"lng":-4.1088,"photo":"assets/photos/day02_segovia.jpg","sourceFile":"LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_33.jpg"}];
+  const photoMarkers = [{"day":2,"kind":"daily","date":"2026-04-23","title":"Day 02｜Segovia(塞哥維亞)","location":"Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)","lat":40.9429,"lng":-4.1148,"photos":["assets/photos/day02_segovia_daily_001.jpg","assets/photos/day02_segovia_daily_005.jpg","assets/photos/day02_segovia_daily_007.jpg","assets/photos/day02_segovia_daily_008.jpg","assets/photos/day02_segovia_daily_009.jpg","assets/photos/day02_segovia_daily_010.jpg","assets/photos/day02_segovia_daily_011.jpg","assets/photos/day02_segovia_daily_012.jpg","assets/photos/day02_segovia_daily_013.jpg","assets/photos/day02_segovia_daily_014.jpg","assets/photos/day02_segovia_daily_015.jpg","assets/photos/day02_segovia_daily_016.jpg","assets/photos/day02_segovia_daily_017.jpg"],"sourceFiles":["LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_17.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_24.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_27.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_28.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_31.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_32.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_34.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_37.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_38.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_43.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_46.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_54.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_7.jpg"]},{"day":2,"kind":"location","date":"2026-04-23","title":"Day 02｜Segovia(塞哥維亞)","location":"Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)","lat":40.9429,"lng":-4.102799999999999,"photos":["assets/photos/day02_segovia_location_002.jpg","assets/photos/day02_segovia_location_003.jpg","assets/photos/day02_segovia_location_004.jpg","assets/photos/day02_segovia_location_006.jpg","assets/photos/day02_segovia_location_018.jpg"],"sourceFiles":["LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_19.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_21.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_22.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_25.jpg","LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_9.jpg"]}];
   const photoLayer = L.layerGroup().addTo(map_ee96a6efcb915a65e7f89b16beb8d46f);
 
-  photoMarkers.forEach(function (marker) {
-    const icon = L.divIcon({
-      className: "spain-photo-marker",
-      html: '<div class="spain-photo-pin"><img src="' + marker.photo + '" alt=""></div>',
-      iconSize: [48, 48],
-      iconAnchor: [24, 24],
-      popupAnchor: [0, -24]
-    });
+  function randomPhoto(marker) {
+    if (!marker.photos.length) return "";
+    return marker.photos[Math.floor(Math.random() * marker.photos.length)];
+  }
 
-    const popupHtml =
+  function popupHtml(marker, photo) {
+    return (
       '<div class="spain-photo-popup">' +
-      '<img src="' + marker.photo + '" alt="' + "Spain travel photo" + '">' +
-      '<strong>' + "" + marker.title + '</strong>' +
+      '<img src="' + photo + '" alt="Spain travel photo">' +
+      '<strong>' + marker.title + '</strong>' +
+      '<span>' + (marker.kind === "daily" ? "Daily Album / 每日相簿" : "Location Album / 地點相簿") + '</span>' +
       '<span>' + marker.date + '</span>' +
       '<span>' + marker.location + '</span>' +
-      '</div>';
+      '<span>' + marker.photos.length + ' photos, random every 2s</span>' +
+      '</div>'
+    );
+  }
 
-    L.marker([marker.lat, marker.lng], { icon: icon })
+  photoMarkers.forEach(function (marker) {
+    let currentPhoto = randomPhoto(marker);
+    const icon = L.divIcon({
+      className: "spain-photo-marker",
+      html: '<div class="spain-photo-pin ' + marker.kind + '"><img src="' + currentPhoto + '" alt=""></div>',
+      iconSize: [54, 54],
+      iconAnchor: [27, 27],
+      popupAnchor: [0, -27]
+    });
+
+    const leafletMarker = L.marker([marker.lat, marker.lng], { icon: icon })
       .addTo(photoLayer)
-      .bindPopup(popupHtml, { maxWidth: 280 });
+      .bindPopup(popupHtml(marker, currentPhoto), { maxWidth: 300 });
+
+    window.setInterval(function () {
+      currentPhoto = randomPhoto(marker);
+      leafletMarker.setIcon(L.divIcon({
+        className: "spain-photo-marker",
+        html: '<div class="spain-photo-pin ' + marker.kind + '"><img src="' + currentPhoto + '" alt=""></div>',
+        iconSize: [54, 54],
+        iconAnchor: [27, 27],
+        popupAnchor: [0, -27]
+      }));
+      if (leafletMarker.isPopupOpen()) {
+        leafletMarker.setPopupContent(popupHtml(marker, currentPhoto));
+      }
+    }, 2000);
   });
 
   if (typeof layer_control_3a01e343489e49f9d33d95fc55f184e7 !== "undefined") {
-    layer_control_3a01e343489e49f9d33d95fc55f184e7.addOverlay(photoLayer, "Travel Photos");
+    layer_control_3a01e343489e49f9d33d95fc55f184e7.addOverlay(photoLayer, "Travel Photo Albums");
   }
 })();
 /* SPAIN_PHOTO_MARKERS_END */
