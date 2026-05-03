@@ -56,6 +56,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+
+<style>
+/* SPAIN_PHOTO_MARKERS_CSS_START */
+.spain-photo-pin {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  background: #111827;
+}
+.spain-photo-pin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.spain-photo-popup {
+  width: 240px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.spain-photo-popup img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 8px;
+}
+.spain-photo-popup strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.spain-photo-popup span {
+  display: block;
+  color: #4b5563;
+  font-size: 12px;
+  line-height: 1.4;
+}
+/* SPAIN_PHOTO_MARKERS_CSS_END */
+</style>
 </head>
 <body>
     
@@ -1576,5 +1619,38 @@
             ).addTo(map_8d8f009ad3ca4ee83e5b6890418e3514);
 
         
+
+/* SPAIN_PHOTO_MARKERS_START */
+(function () {
+  const photoMarkers = [{"day":1,"date":"2026-04-22","title":"Day 01｜Madrid(馬德里)","location":"Madrid(馬德里) → Madrid City Center(馬德里市中心)","lat":40.4168,"lng":-3.7038,"photo":"assets/photos/day01_madrid.jpg","sourceFile":"LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_54.jpg"},{"day":2,"date":"2026-04-23","title":"Day 02｜Segovia(塞哥維亞)","location":"Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)","lat":40.9429,"lng":-4.1088,"photo":"assets/photos/day02_segovia.jpg","sourceFile":"LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_33.jpg"},{"day":3,"date":"2026-04-24","title":"Day 03｜Toledo(托雷多)","location":"Toledo(托雷多) → Medieval Old Town(中世紀舊城) → Mirador del Valle(山谷觀景台)","lat":39.8628,"lng":-4.0273,"photo":"assets/photos/day03_toledo.jpg","sourceFile":"LINE_ALBUM_2026424 Day 3-西班牙_260503_79.jpg"},{"day":4,"date":"2026-04-25","title":"Day 04｜Córdoba(哥多華)","location":"Córdoba(哥多華) → Jewish Quarter(猶太區) → Roman Bridge(羅馬橋)","lat":37.879,"lng":-4.7794,"photo":"assets/photos/day04_cordoba.jpg","sourceFile":"LINE_ALBUM_2026425 Day 4-西班牙_260503_40.jpg"},{"day":5,"date":"2026-04-26","title":"Day 05｜Granada(格拉納達)","location":"Granada(格拉納達) → Alhambra(阿爾罕布拉宮) → Albaicín(阿爾拜辛)","lat":37.1761,"lng":-3.5881,"photo":"assets/photos/day05_granada.jpg","sourceFile":"LINE_ALBUM_2026426 Day 5-西班牙_260503_124.jpg"},{"day":6,"date":"2026-04-27","title":"Day 06｜Ronda(隆達)","location":"Ronda(隆達) → Puente Nuevo(新橋) → Old Town(舊城區)","lat":36.7423,"lng":-5.1671,"photo":"assets/photos/day06_ronda.jpg","sourceFile":"LINE_ALBUM_2026427 Day 6-西班牙_260503_5.jpg"},{"day":7,"date":"2026-04-28","title":"Day 07｜Mijas(米哈斯)","location":"Mijas(米哈斯) → White Village(白色山城) → Mediterranean View(地中海景觀)","lat":36.5958,"lng":-4.6373,"photo":"assets/photos/day07_mijas.jpg","sourceFile":"LINE_ALBUM_20260428 Day 7-西班牙_260503_47.jpg"},{"day":8,"date":"2026-04-29","title":"Day 08｜Sevilla(塞維亞)","location":"Sevilla(塞維亞) → Plaza de España(西班牙廣場) → Sevilla Cathedral(塞維亞主教座堂)","lat":37.3891,"lng":-5.9845,"photo":"assets/photos/day08_sevilla.jpg","sourceFile":"LINE_ALBUM_2026429 Day 8-西班牙_260503_52.jpg"},{"day":9,"date":"2026-04-30","title":"Day 09｜Montserrat(蒙塞拉特)","location":"Montserrat(蒙塞拉特) → Mountain Monastery(山中修道院) → Scenic Trail(景觀步道)","lat":41.5931,"lng":1.8379,"photo":"assets/photos/day09_montserrat.jpg","sourceFile":"LINE_ALBUM_20260430 Day 9-西班牙_260503_28.jpg"},{"day":10,"date":"2026-05-01","title":"Day 10｜Barcelona(巴塞隆納)","location":"Barcelona(巴塞隆納) → Sagrada Família(聖家堂) → Park Güell(奎爾公園) → Gothic Quarter(哥德區)","lat":41.4036,"lng":2.1744,"photo":"assets/photos/day10_barcelona.jpg","sourceFile":"LINE_ALBUM_202651 Day 10-西班牙_260503_12.jpg"}];
+  const photoLayer = L.layerGroup().addTo(map_8d8f009ad3ca4ee83e5b6890418e3514);
+
+  photoMarkers.forEach(function (marker) {
+    const icon = L.divIcon({
+      className: "spain-photo-marker",
+      html: '<div class="spain-photo-pin"><img src="' + marker.photo + '" alt=""></div>',
+      iconSize: [48, 48],
+      iconAnchor: [24, 24],
+      popupAnchor: [0, -24]
+    });
+
+    const popupHtml =
+      '<div class="spain-photo-popup">' +
+      '<img src="' + marker.photo + '" alt="' + "Spain travel photo" + '">' +
+      '<strong>' + "" + marker.title + '</strong>' +
+      '<span>' + marker.date + '</span>' +
+      '<span>' + marker.location + '</span>' +
+      '</div>';
+
+    L.marker([marker.lat, marker.lng], { icon: icon })
+      .addTo(photoLayer)
+      .bindPopup(popupHtml, { maxWidth: 280 });
+  });
+
+  if (typeof layer_control_3a01e343489e49f9d33d95fc55f184e7 !== "undefined") {
+    layer_control_3a01e343489e49f9d33d95fc55f184e7.addOverlay(photoLayer, "Travel Photos");
+  }
+})();
+/* SPAIN_PHOTO_MARKERS_END */
 </script>
 </html>

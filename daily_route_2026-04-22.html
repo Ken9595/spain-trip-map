@@ -56,6 +56,49 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+
+<style>
+/* SPAIN_PHOTO_MARKERS_CSS_START */
+.spain-photo-pin {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  background: #111827;
+}
+.spain-photo-pin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.spain-photo-popup {
+  width: 240px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.spain-photo-popup img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 8px;
+}
+.spain-photo-popup strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.spain-photo-popup span {
+  display: block;
+  color: #4b5563;
+  font-size: 12px;
+  line-height: 1.4;
+}
+/* SPAIN_PHOTO_MARKERS_CSS_END */
+</style>
 </head>
 <body>
     
@@ -1197,5 +1240,38 @@
             ).addTo(map_ef734b6bc046d24c2a6174ca8a4af744);
 
         
+
+/* SPAIN_PHOTO_MARKERS_START */
+(function () {
+  const photoMarkers = [{"day":1,"date":"2026-04-22","title":"Day 01｜Madrid(馬德里)","location":"Madrid(馬德里) → Madrid City Center(馬德里市中心)","lat":40.4168,"lng":-3.7038,"photo":"assets/photos/day01_madrid.jpg","sourceFile":"LINE_ALBUM_20260422 .23Day1.2-西班牙_260503_54.jpg"}];
+  const photoLayer = L.layerGroup().addTo(map_ef734b6bc046d24c2a6174ca8a4af744);
+
+  photoMarkers.forEach(function (marker) {
+    const icon = L.divIcon({
+      className: "spain-photo-marker",
+      html: '<div class="spain-photo-pin"><img src="' + marker.photo + '" alt=""></div>',
+      iconSize: [48, 48],
+      iconAnchor: [24, 24],
+      popupAnchor: [0, -24]
+    });
+
+    const popupHtml =
+      '<div class="spain-photo-popup">' +
+      '<img src="' + marker.photo + '" alt="' + "Spain travel photo" + '">' +
+      '<strong>' + "" + marker.title + '</strong>' +
+      '<span>' + marker.date + '</span>' +
+      '<span>' + marker.location + '</span>' +
+      '</div>';
+
+    L.marker([marker.lat, marker.lng], { icon: icon })
+      .addTo(photoLayer)
+      .bindPopup(popupHtml, { maxWidth: 280 });
+  });
+
+  if (typeof layer_control_3a01e343489e49f9d33d95fc55f184e7 !== "undefined") {
+    layer_control_3a01e343489e49f9d33d95fc55f184e7.addOverlay(photoLayer, "Travel Photos");
+  }
+})();
+/* SPAIN_PHOTO_MARKERS_END */
 </script>
 </html>
