@@ -3,10 +3,10 @@
     "day": 1,
     "kind": "daily",
     "date": "2026-04-22",
-    "title": "Day 01｜Madrid(馬德里)",
-    "location": "Madrid(馬德里) → Madrid City Center(馬德里市中心)",
-    "lat": 40.4168,
-    "lng": -3.7388000000000003,
+    "title": "Day 01｜Taipei (台北) → Dubai (杜拜)",
+    "location": "Taipei (台北) → Taiwan Taoyuan International Airport (桃園國際機場) → Dubai (杜拜)",
+    "lat": 24.8991551,
+    "lng": 121.1115173,
     "photos": [
       "assets/photos/day01_madrid_daily_002.jpg"
     ],
@@ -18,10 +18,10 @@
     "day": 1,
     "kind": "location",
     "date": "2026-04-22",
-    "title": "Day 01｜Madrid(馬德里)",
-    "location": "Madrid(馬德里) → Madrid City Center(馬德里市中心)",
-    "lat": 40.4168,
-    "lng": -3.6688,
+    "title": "Day 01｜Taipei (台北) → Dubai (杜拜)",
+    "location": "Taipei (台北) → Taiwan Taoyuan International Airport (桃園國際機場) → Dubai (杜拜)",
+    "lat": 24.8991551,
+    "lng": 121.1815173,
     "photos": [
       "assets/photos/day01_madrid_location_001.jpg"
     ],
@@ -33,8 +33,8 @@
     "day": 2,
     "kind": "daily",
     "date": "2026-04-23",
-    "title": "Day 02｜Segovia(塞哥維亞)",
-    "location": "Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)",
+    "title": "Day 02｜Dubai (杜拜) → Madrid (馬德里) → Segovia (塞哥維亞)",
+    "location": "Dubai (杜拜) → Madrid (馬德里) → Segovia (塞哥維亞)",
     "lat": 40.5199358,
     "lng": -3.7170394,
     "photos": [
@@ -72,8 +72,8 @@
     "day": 2,
     "kind": "location",
     "date": "2026-04-23",
-    "title": "Day 02｜Segovia(塞哥維亞)",
-    "location": "Madrid(馬德里) → Segovia(塞哥維亞) → Old Town(舊城區)",
+    "title": "Day 02｜Dubai (杜拜) → Madrid (馬德里) → Segovia (塞哥維亞)",
+    "location": "Dubai (杜拜) → Madrid (馬德里) → Segovia (塞哥維亞)",
     "lat": 40.5199358,
     "lng": -3.6470393999999997,
     "photos": [
@@ -96,7 +96,7 @@
     "kind": "daily",
     "date": "2026-04-24",
     "title": "Day 03｜Toledo(托雷多)",
-    "location": "Toledo(托雷多) → Medieval Old Town(中世紀舊城) → Mirador del Valle(山谷觀景台)",
+    "location": "Toledo (托雷多) → Medieval Old Town (中世紀舊城) → Mirador del Valle (山谷觀景台)",
     "lat": 40.4182919,
     "lng": -3.7479388,
     "photos": [
@@ -151,7 +151,7 @@
     "kind": "location",
     "date": "2026-04-24",
     "title": "Day 03｜Toledo(托雷多)",
-    "location": "Toledo(托雷多) → Medieval Old Town(中世紀舊城) → Mirador del Valle(山谷觀景台)",
+    "location": "Toledo (托雷多) → Medieval Old Town (中世紀舊城) → Mirador del Valle (山谷觀景台)",
     "lat": 40.4182919,
     "lng": -3.6779387999999997,
     "photos": [
@@ -248,7 +248,7 @@
     "kind": "daily",
     "date": "2026-04-25",
     "title": "Day 04｜Córdoba(哥多華)",
-    "location": "Córdoba(哥多華) → Jewish Quarter(猶太區) → Roman Bridge(羅馬橋)",
+    "location": "Córdoba (哥多華) → Jewish Quarter (猶太區) → Roman Bridge (羅馬橋)",
     "lat": 39.458175,
     "lng": -3.6365093,
     "photos": [
@@ -301,7 +301,7 @@
     "kind": "location",
     "date": "2026-04-25",
     "title": "Day 04｜Córdoba(哥多華)",
-    "location": "Córdoba(哥多華) → Jewish Quarter(猶太區) → Roman Bridge(羅馬橋)",
+    "location": "Córdoba (哥多華) → Jewish Quarter (猶太區) → Roman Bridge (羅馬橋)",
     "lat": 39.458175,
     "lng": -3.5665093,
     "photos": [
@@ -376,7 +376,7 @@
     "kind": "daily",
     "date": "2026-04-26",
     "title": "Day 05｜Granada(格拉納達)",
-    "location": "Granada(格拉納達) → Alhambra(阿爾罕布拉宮) → Albaicín(阿爾拜辛)",
+    "location": "Granada (格拉納達) → Alhambra (阿罕布拉宮) → Albaicín (阿爾拜辛區)",
     "lat": 37.7298311,
     "lng": -4.6703887,
     "photos": [
@@ -417,7 +417,7 @@
     "kind": "location",
     "date": "2026-04-26",
     "title": "Day 05｜Granada(格拉納達)",
-    "location": "Granada(格拉納達) → Alhambra(阿爾罕布拉宮) → Albaicín(阿爾拜辛)",
+    "location": "Granada (格拉納達) → Alhambra (阿罕布拉宮) → Albaicín (阿爾拜辛區)",
     "lat": 37.7298311,
     "lng": -4.6003887,
     "photos": [
@@ -480,7 +480,7 @@
     "kind": "daily",
     "date": "2026-04-27",
     "title": "Day 06｜Ronda(隆達)",
-    "location": "Ronda(隆達) → Puente Nuevo(新橋) → Old Town(舊城區)",
+    "location": "Ronda (隆達) → Puente Nuevo (新橋) → Old Town (舊城區)",
     "lat": 37.1483303,
     "lng": -4.2667834000000004,
     "photos": [
@@ -519,7 +519,7 @@
     "kind": "location",
     "date": "2026-04-27",
     "title": "Day 06｜Ronda(隆達)",
-    "location": "Ronda(隆達) → Puente Nuevo(新橋) → Old Town(舊城區)",
+    "location": "Ronda (隆達) → Puente Nuevo (新橋) → Old Town (舊城區)",
     "lat": 37.1483303,
     "lng": -4.1967834,
     "photos": [
@@ -926,7 +926,7 @@
     "kind": "daily",
     "date": "2026-05-01",
     "title": "Day 10｜Barcelona(巴塞隆納)",
-    "location": "Barcelona(巴塞隆納) → Sagrada Família(聖家堂) → Park Güell(奎爾公園) → Gothic Quarter(哥德區)",
+    "location": "Barcelona (巴塞隆納) → Sagrada Família (聖家堂) → Park Güell (奎爾公園) → Gothic Quarter (哥德區)",
     "lat": 41.395347,
     "lng": 2.1287423999999997,
     "photos": [
@@ -943,7 +943,7 @@
     "kind": "location",
     "date": "2026-05-01",
     "title": "Day 10｜Barcelona(巴塞隆納)",
-    "location": "Barcelona(巴塞隆納) → Sagrada Família(聖家堂) → Park Güell(奎爾公園) → Gothic Quarter(哥德區)",
+    "location": "Barcelona (巴塞隆納) → Sagrada Família (聖家堂) → Park Güell (奎爾公園) → Gothic Quarter (哥德區)",
     "lat": 41.395347,
     "lng": 2.1987424,
     "photos": [
