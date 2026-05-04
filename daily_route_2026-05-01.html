@@ -88,6 +88,9 @@
 </style>
 
 <style>
+</style>
+
+<style>
 /* SPAIN_PHOTO_MARKERS_CSS_START */
 .spain-photo-pin {
   width: 54px;
@@ -1149,9 +1152,10 @@
 
 
 
+
 /* SPAIN_PHOTO_MARKERS_START */
 (function () {
-  const photoMarkers = [{"day":10,"kind":"daily","date":"2026-05-01","title":"Day 10｜Barcelona(巴塞隆納)","location":"Barcelona (巴塞隆納) → Sagrada Família (聖家堂) → Park Güell (奎爾公園) → Gothic Quarter (哥德區)","lat":41.395347,"lng":2.1287423999999997,"photos":["assets/photos/day10_barcelona_daily_004.jpg","assets/photos/day10_barcelona_daily_010.jpg"],"sourceFiles":["LINE_ALBUM_202651 Day 10-西班牙_260503_13.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_9.jpg"]},{"day":10,"kind":"location","date":"2026-05-01","title":"Day 10｜Barcelona(巴塞隆納)","location":"Barcelona (巴塞隆納) → Sagrada Família (聖家堂) → Park Güell (奎爾公園) → Gothic Quarter (哥德區)","lat":41.395347,"lng":2.1987424,"photos":["assets/photos/day10_barcelona_location_001.jpg","assets/photos/day10_barcelona_location_002.jpg","assets/photos/day10_barcelona_location_003.jpg","assets/photos/day10_barcelona_location_005.jpg","assets/photos/day10_barcelona_location_006.jpg","assets/photos/day10_barcelona_location_007.jpg","assets/photos/day10_barcelona_location_008.jpg","assets/photos/day10_barcelona_location_009.jpg"],"sourceFiles":["LINE_ALBUM_202651 Day 10-西班牙_260503_1.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_10.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_12.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_2.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_3.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_4.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_5.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_8.jpg"]}];
+  const photoMarkers = [{"day":10,"kind":"daily","date":"2026-05-01","title":"Day 10｜Barcelona (巴塞隆納)","location":"Barcelona (巴塞隆納) → Sagrada Família (聖家堂) → Park Güell (奎爾公園) → Gothic Quarter (哥德區)","lat":41.395347,"lng":2.1287423999999997,"photos":["assets/photos/day10_barcelona_daily_004.jpg","assets/photos/day10_barcelona_daily_010.jpg"],"sourceFiles":["LINE_ALBUM_202651 Day 10-西班牙_260503_13.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_9.jpg"]},{"day":10,"kind":"location","date":"2026-05-01","title":"Day 10｜Barcelona (巴塞隆納)","location":"Barcelona (巴塞隆納) → Sagrada Família (聖家堂) → Park Güell (奎爾公園) → Gothic Quarter (哥德區)","lat":41.395347,"lng":2.1987424,"photos":["assets/photos/day10_barcelona_location_001.jpg","assets/photos/day10_barcelona_location_002.jpg","assets/photos/day10_barcelona_location_003.jpg","assets/photos/day10_barcelona_location_005.jpg","assets/photos/day10_barcelona_location_006.jpg","assets/photos/day10_barcelona_location_007.jpg","assets/photos/day10_barcelona_location_008.jpg","assets/photos/day10_barcelona_location_009.jpg"],"sourceFiles":["LINE_ALBUM_202651 Day 10-西班牙_260503_1.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_10.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_12.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_2.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_3.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_4.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_5.jpg","LINE_ALBUM_202651 Day 10-西班牙_260503_8.jpg"]}];
   const photoLayer = L.layerGroup().addTo(map_abadc1068b56a3e6c4d9b2ce22ba824f);
 
   function randomPhoto(marker) {
